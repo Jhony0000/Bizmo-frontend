@@ -1,11 +1,15 @@
 import React from "react";
-import { Login } from "./components";
+import { useSelector } from "react-redux";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  return (
+  const userData = useSelector((state) => state.auth.userData);
+  return userData ? (
     <div>
-      <Login />
+      <Outlet />
     </div>
+  ) : (
+    <Outlet />
   );
 }
 

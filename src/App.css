@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/* logine page  */
+.logo img{
+    max-width: 200px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: -70px;
+}
+.login-page .lonk{
+    margin-top: 10px;
+}
+.login-page a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: orange;
+    font-family: sans-serif;
+}
+.login-page a:hover{
+    color: black;
+}
+.login-page .login-components{
+    height: 33vh;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    width: 50vw;
+}
+.brand-name{
+    font-size: 1.5rem;
+    color: rgb(0, 255, 0);
+    margin-top: 13px;
+}
+.bizmo-brand-name{
+    color: rgb(0, 255, 0);
+}
+.login-page .login-section{
+    padding: 10px;
+border: 1px solid whitesmoke;
+border-radius: 10px;
+cursor: pointer;
+}
+.login-section .google-img{
+    width: 20px;
+}
+.login-section span{
+    font-family: sans-serif;
+    font-size: 13px;
+}
+.signup-message{
+    font-size: 10px;
+    margin-left: 5px;
+    font-family: sans-serif;
+}
+.signup-link{
+    font-size: 10px;
+    color: orange;
+    cursor: pointer;
+   margin-left: -19px;
+}
+@media screen and (max-width: 690px){
+    .login-page .login-components{
+        width: 90vw;
+    }
+}
+@media screen and (max-width: 500px){
+    .login-page .login-components{
+        width: 100vw;
+    }
+}
+/* footer css  */
+.footer{
+    color: white;
+    height: 20vh;
+    margin: 0px;
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 10px;
+    margin: 10px;
+    width: 97%;
+    font-size: 10px;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding-top: 57px;
+}

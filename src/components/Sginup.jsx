@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "./index";
 
-function Login() {
+function Sginup() {
   return (
     <div className="container-fluid login-page">
       <div className="row">
@@ -19,7 +19,7 @@ function Login() {
         <div className="col-12 mt-5 login-components ">
           <div className="row">
             <div className="mt-2 col-12 d-flex justify-content-center ">
-              <h6>Login</h6>
+              <h6>Sign Up</h6>
               <h6 className="mx-3 bizmo-brand-name">Bizmo</h6>
             </div>
             <div className="col-12 mt-2">
@@ -39,13 +39,13 @@ function Login() {
                 <span className="mx-5">Continue with email/username</span>
               </div>
             </div>
-            <div className="col-12 d-flex pt-4">
+            <div className="col-12 d-flex mt-4">
               <div className="div">
                 <span className="signup-message">Don't have an account?</span>
               </div>
               <div className="div">
-                <Link to="/signup" className="">
-                  <span className="signup-link">Sign Up</span>
+                <Link to="/login" className="">
+                  <span className="signup-link">Login</span>
                 </Link>{" "}
               </div>
             </div>
@@ -61,4 +61,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Sginup;
