@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -21,11 +26,11 @@
     margin: 20px;
     font-size: 0.6rem;
     font-weight: 600;
-    color: orange;
+    color: black;
     font-family: sans-serif;
 }
 .login-page a:hover{
-    color: black;
+    color: rgb(255, 187, 1);
 }
 .login-page .login-components{
     height: 33vh;
@@ -34,9 +39,9 @@
     width: 50vw;
 }
 .brand-name{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: rgb(0, 255, 0);
-    margin-top: 13px;
+    margin-top: 13px;cursor: pointer;
 }
 .bizmo-brand-name{
     color: rgb(0, 255, 0);
@@ -61,7 +66,7 @@ cursor: pointer;
 }
 .signup-link{
     font-size: 10px;
-    color: orange;
+    color: black;
     cursor: pointer;
    margin-left: -19px;
 }
@@ -75,6 +80,78 @@ cursor: pointer;
         width: 100vw;
     }
 }
+
+/* home page css  start */
+.header{
+    height: 80px;
+}
+.header-icon{
+    font-size: 17px;
+    color: rgb(116, 111, 111);
+    cursor: pointer;
+}
+.business-btn{
+    border: none;
+    background: none;
+    font-size: 15px;
+    color: rgb(3, 173, 3);
+    font-weight: 600;
+    margin-top: 20px;
+}
+.order-btn{
+    border: none;
+    background: none;
+    font-size: 15px;
+    color: rgb(117, 126, 117);
+    font-weight: 600;
+    margin-top: 20px;
+}
+.profile_photo{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 17px;
+    cursor: pointer;
+}
+.home_page_manue-icon{
+    font-size: 25px;
+    cursor: pointer;
+}
+.header .search-icon{
+    font-size: 17px;
+    margin-top: 13px;
+    margin-left: -19px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: 41px;
+    padding-top: 7px;
+    height: 41px;
+    cursor: pointer;
+    text-align: center;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.nav-serch-bar{
+    width: 37vw;
+    height: 37px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5px;
+    border: 1px solid rgb(219, 215, 215);
+}
+@media(min-width:992px){
+    .header-order-bussiness-profileImg-section{
+        margin-right: 200px;
+    }
+   
+   .header-logo-serchbar-serch-icon{
+    margin-left: 131px;
+   }
+}
+
 /* footer css  */
 .footer{
     color: white;

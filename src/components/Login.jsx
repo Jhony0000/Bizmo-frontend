@@ -1,8 +1,44 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Footer } from "./index";
+import { sginUpWithGoogle, getCurrentUser } from "../api/Auth.api";
+import { useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
+import { login as authLogin } from "../store/AuthSlice";
+import { useDispatch } from "react-redux";
 
 function Login() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const login = useGoogleLogin({
+    onSuccess: async (response) => {
+      try {
+        const res = axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
+          headers: {
+            Authorization: `Bearer ${response.access_token}`,
+          },
+        });
+        const userData = (await res).data;
+
+        const data = await sginUpWithGoogle(
+          userData.email,
+          userData.name,
+          userData.picture,
+          userData.sub
+        );
+        if (data) {
+          const user = await getCurrentUser();
+          dispatch(authLogin(user));
+          console.log("user", user);
+          navigate("/");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  });
+
   return (
     <div className="container-fluid login-page">
       <div className="row">
@@ -22,7 +58,7 @@ function Login() {
               <h6>Login</h6>
               <h6 className="mx-3 bizmo-brand-name">Bizmo</h6>
             </div>
-            <div className="col-12 mt-2">
+            <div className="col-12 mt-2" onClick={login}>
               <div className="login-section ">
                 <img
                   className="google-img"

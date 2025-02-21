@@ -11,7 +11,7 @@ const AuthSlice = createSlice({
     reducers : {
         login : (state,actino)=> {
             state.status = true
-            state.userData = actino.payload.userData
+            state.userData = actino.payload
         },
         logout : (state)=>{
             state.status = false
