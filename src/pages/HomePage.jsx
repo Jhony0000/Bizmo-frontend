@@ -12,7 +12,15 @@ function HomePage() {
           <Header />
         </div>
       </div>
-      <div className="row"></div>
+      <div className="row">
+        <div className="col-12 hero_section">
+          <div className="div ">
+            <button className="hero_btn">Man</button>
+            <button className="hero_btn">Woman</button>
+            <button className="hero_btn">Children</button>
+          </div>
+        </div>
+      </div>
       <div className="row text-center ">
         <Footer />
       </div>

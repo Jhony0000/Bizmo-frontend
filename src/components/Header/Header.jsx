@@ -15,9 +15,9 @@ function Header() {
           <i className="ri-search-line"></i>
         </div>
       </div>
-      <div className="div  d-flex header-order-bussiness-profileImg-section">
+      <div className="div   d-flex header-order-bussiness-profileImg-section">
         <div className="div d-none d-md-block mt-3">
-          <i className=" ri-notification-4-line header-icon "></i>
+          <i className="  ri-notification-4-line header-icon "></i>
           <i className="ri-mail-line header-icon mx-4"></i>
           <i className="ri-heart-line header-icon "></i>
         </div>
