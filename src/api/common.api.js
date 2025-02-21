@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const api_url = "http://127.0.0.1:8000/api";
+export const api_url = "https://2243-103-209-109-231.ngrok-free.app/api";
 
 // Axios Instance with Token Management
 const api = axios.create({
